@@ -1,6 +1,5 @@
 PORTNAME=	openssl
-PORTVERSION=	23.2.0
-PORTEPOCH=	1
+PORTVERSION=	24.0.0
 CATEGORIES=	security python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -42,4 +41,10 @@ PYTEST_IGNORED_TESTS=	test_connect_ex \
 TEST_ENV=	LC_ALL=en_US.UTF-8 \
 		PYTHONPATH=${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}
 
-.include <bsd.port.mk>
+.include <bsd.port.pre.mk>
+
+.if ${PYCRYPTOGRAPHY_DEFAULT} != "rust"
+IGNORE=		Newer versions of security/py-openssl require PYCRYPTOGRAPHY_DEFAULT=rust.
+.endif
+
+.include <bsd.port.post.mk>
