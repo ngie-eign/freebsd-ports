@@ -1,7 +1,6 @@
 PORTNAME=	lutok
-DISTVERSION=	0.5
+DISTVERSION=	0.6
 CATEGORIES=	devel
-MASTER_SITES=https://github.com/freebsd/${PORTNAME}/releases/download/${DISTNAME}/
 
 MAINTAINER=	bofh@FreeBSD.org
 COMMENT=	Lightweight C++ API for Lua
@@ -13,14 +12,13 @@ BUILD_DEPENDS=	atf>=0.21:devel/atf
 RUN_DEPENDS=	atf>=0.21:devel/atf
 
 USES=		autoreconf libtool lua pathfix pkgconfig
-USE_CXXSTD=	gnu++11
+USE_GITHUB=	yes
+GH_ACCOUNT=	freebsd
+GH_TAGNAME=	lutok-0.6
+USE_CXXSTD=	gnu++14
 USE_LDCONFIG=	yes
 
 GNU_CONFIGURE=	yes
-#TEST_CONFIGURE_WITH=	atf
-# Force the use of the lua version we have chosen via USE_LUA.  If we allow
-# lutok's configure script search for one using pkgconfig files, it might pick
-# a different version.
 CONFIGURE_ARGS+=	LUA_CFLAGS="-I${LUA_INCDIR}"
 CONFIGURE_ARGS+=	LUA_LIBS="-L${LUA_LIBDIR} -llua-${LUA_VER} -lm"
 
