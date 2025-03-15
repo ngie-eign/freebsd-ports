@@ -5757,6 +5757,7 @@
     SUBDIR += py-polyfactory
     SUBDIR += py-pondpond
     SUBDIR += py-pooch
+    SUBDIR += py-polling2
     SUBDIR += py-pop
     SUBDIR += py-pop-config
     SUBDIR += py-portalocker
