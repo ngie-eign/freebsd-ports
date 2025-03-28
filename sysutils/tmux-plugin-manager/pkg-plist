@@ -1,0 +1,23 @@
+%%DATADIR%%/bin/clean_plugins
+%%DATADIR%%/bin/install_plugins
+%%DATADIR%%/bin/update_plugins
+%%DATADIR%%/bindings/clean_plugins
+%%DATADIR%%/bindings/install_plugins
+%%DATADIR%%/bindings/update_plugins
+%%DATADIR%%/scripts/check_tmux_version.sh
+%%DATADIR%%/scripts/clean_plugins.sh
+%%DATADIR%%/scripts/helpers/plugin_functions.sh
+%%DATADIR%%/scripts/helpers/shell_echo_functions.sh
+%%DATADIR%%/scripts/helpers/tmux_echo_functions.sh
+%%DATADIR%%/scripts/helpers/tmux_utils.sh
+%%DATADIR%%/scripts/helpers/utility.sh
+%%DATADIR%%/scripts/install_plugins.sh
+%%DATADIR%%/scripts/source_plugins.sh
+%%DATADIR%%/scripts/update_plugin.sh
+%%DATADIR%%/scripts/update_plugin_prompt_handler.sh
+%%DATADIR%%/scripts/variables.sh
+%%DATADIR%%/tpm
+@dir %%DATADIR%%/bin
+@dir %%DATADIR%%/bindings
+@dir %%DATADIR%%/scripts
+@dir %%DATADIR%%/scripts/helpers
