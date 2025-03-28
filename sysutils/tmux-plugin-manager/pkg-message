@@ -1,0 +1,15 @@
+[
+{ type: install
+  message: <<EOM
+
+Add the following line to ~/.tmux.conf to activate tpm:
+
+  set -g @plugin 'tmux-plugins/tpm'
+
+If tmux is running already, execute the following command to source
+the new ~/.tmux.conf:
+
+  tmux source ~/.tmux.conf
+EOM
+}
+]
