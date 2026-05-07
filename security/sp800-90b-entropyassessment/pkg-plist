@@ -1,0 +1,17 @@
+%%PORTDOCS%%%%DOCSDIR%%/README.md
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/biased-random-bits.bin
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/biased-random-bytes.bin
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/data.pi.bin
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/normal.bin
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/rand1_short.bin
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/rand4_short.bin
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/rand8_short.bin
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/ringOsc-nist.bin
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/truerand_1bit.bin
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/truerand_4bit.bin
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/truerand_8bit.bin
+bin/ea_conditioning
+bin/ea_iid
+bin/ea_non_iid
+bin/ea_restart
+bin/ea_transpose
