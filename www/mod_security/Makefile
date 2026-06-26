@@ -1,5 +1,6 @@
 PORTNAME=	mod_security
 PORTVERSION=	2.9.14
+PORTREVISION=	1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	www security
 PKGNAMEPREFIX=	${APACHE_PKGNAMEPREFIX}
@@ -14,9 +15,7 @@ PORTSCOUT=	limit:^2\.
 
 LIB_DEPENDS+=	libpcre2-8.so:devel/pcre2 \
 		libapr-1.so:devel/apr1 \
-		libyajl.so:devel/yajl \
 		libcurl.so:ftp/curl \
-		libgdbm.so:databases/gdbm \
 		libexpat.so:textproc/expat2
 
 USES=		apache gnome perl5 pkgconfig shebangfix autoreconf libtool:build
@@ -43,7 +42,7 @@ SUB_FILES+=	${APMOD_FILE}.sample
 APMOD_FILE=	280_${PORTNAME}.conf
 SUB_LIST+=	APMOD_FILE=${APMOD_FILE}
 
-OPTIONS_DEFINE=	DOCS FUZZYHASH LUA MLOGC
+OPTIONS_DEFINE=	DOCS FUZZYHASH LUA MLOGC YAJL
 OPTIONS_SUB=	yes
 
 LUA_CONFIGURE_ON=	--with-lua=${LOCALBASE}
@@ -59,13 +58,17 @@ FUZZYHASH_CONFIGURE_ON=	--with-ssdeep=${LOCALBASE}
 FUZZYHASH_CONFIGURE_OFF=--without-ssdeep
 FUZZYHASH_LIB_DEPENDS=	libfuzzy.so:security/ssdeep
 
+YAJL_DESC=		JSON body processor support
+YAJL_CONFIGURE_ON=	--with-yajl=${LOCALBASE}
+YAJL_CONFIGURE_OFF+=	--without-yajl
+YAJL_LIB_DEPENDS=	libyajl.so:devel/yajl
+
 ETCDIR=		${PREFIX}/etc/modsecurity
 
 REINPLACE_ARGS=	-i ""
 AP_EXTRAS+=	-DWITH_LIBXML2
 CONFIGURE_ARGS+=--with-apxs=${APXS} \
 		--with-pcre2=${LOCALBASE} \
-		--with-yajl=${LOCALBASE} \
 		--with-curl=${LOCALBASE}
 
 pre-install:
