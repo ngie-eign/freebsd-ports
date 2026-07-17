@@ -10,6 +10,32 @@ FLAVORS=	default release
 release_PKGNAMESUFFIX=	-release
 
 RUN_DEPENDS=	\
+	wifi-firmware-brcm80211-kmod>0:net/wifi-firmware-brcm80211-kmod@bcm4329-fullmac-4bin \
+	wifi-firmware-brcm80211-kmod>0:net/wifi-firmware-brcm80211-kmod@bcm43xx-0fw \
+	wifi-firmware-brcm80211-kmod>0:net/wifi-firmware-brcm80211-kmod@bcm43xx_hdr-0fw \
+	wifi-firmware-brcm80211-kmod>0:net/wifi-firmware-brcm80211-kmod@brcmfmac43143-sdiobin \
+	wifi-firmware-brcm80211-kmod>0:net/wifi-firmware-brcm80211-kmod@brcmfmac43143bin \
+	wifi-firmware-brcm80211-kmod>0:net/wifi-firmware-brcm80211-kmod@brcmfmac43236bbin \
+	wifi-firmware-brcm80211-kmod>0:net/wifi-firmware-brcm80211-kmod@brcmfmac43241b0-sdiobin \
+	wifi-firmware-brcm80211-kmod>0:net/wifi-firmware-brcm80211-kmod@brcmfmac43241b4-sdiobin \
+	wifi-firmware-brcm80211-kmod>0:net/wifi-firmware-brcm80211-kmod@brcmfmac43241b5-sdiobin \
+	wifi-firmware-brcm80211-kmod>0:net/wifi-firmware-brcm80211-kmod@brcmfmac43242abin \
+	wifi-firmware-brcm80211-kmod>0:net/wifi-firmware-brcm80211-kmod@brcmfmac4329-sdiobin \
+	wifi-firmware-brcm80211-kmod>0:net/wifi-firmware-brcm80211-kmod@brcmfmac4330-sdiobin \
+	wifi-firmware-brcm80211-kmod>0:net/wifi-firmware-brcm80211-kmod@brcmfmac4334-sdiobin \
+	wifi-firmware-brcm80211-kmod>0:net/wifi-firmware-brcm80211-kmod@brcmfmac4335-sdiobin \
+	wifi-firmware-brcm80211-kmod>0:net/wifi-firmware-brcm80211-kmod@brcmfmac43430a0-sdiobin \
+	wifi-firmware-brcm80211-kmod>0:net/wifi-firmware-brcm80211-kmod@brcmfmac4350-pciebin \
+	wifi-firmware-brcm80211-kmod>0:net/wifi-firmware-brcm80211-kmod@brcmfmac4350c2-pciebin \
+	wifi-firmware-brcm80211-kmod>0:net/wifi-firmware-brcm80211-kmod@brcmfmac43569bin \
+	wifi-firmware-brcm80211-kmod>0:net/wifi-firmware-brcm80211-kmod@brcmfmac4358-pciebin \
+	wifi-firmware-brcm80211-kmod>0:net/wifi-firmware-brcm80211-kmod@brcmfmac43602-pcieapbin \
+	wifi-firmware-brcm80211-kmod>0:net/wifi-firmware-brcm80211-kmod@brcmfmac43602-pciebin \
+	wifi-firmware-brcm80211-kmod>0:net/wifi-firmware-brcm80211-kmod@brcmfmac4366b-pciebin \
+	wifi-firmware-brcm80211-kmod>0:net/wifi-firmware-brcm80211-kmod@brcmfmac4366c-pciebin \
+	wifi-firmware-brcm80211-kmod>0:net/wifi-firmware-brcm80211-kmod@brcmfmac4371-pciebin \
+	wifi-firmware-brcm80211-kmod>0:net/wifi-firmware-brcm80211-kmod@brcmfmac4373bin
+	\
 	wifi-firmware-iwlwifi-kmod-7000>0:net/wifi-firmware-iwlwifi-kmod@7000 \
 	wifi-firmware-iwlwifi-kmod-8000>0:net/wifi-firmware-iwlwifi-kmod@8000 \
 	wifi-firmware-iwlwifi-kmod-9000>0:net/wifi-firmware-iwlwifi-kmod@9000 \
